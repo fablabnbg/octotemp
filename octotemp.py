@@ -17,7 +17,7 @@ topicbed = 'sometopic/temp/bed'	                    			            #topic to pos
 hostname = 'hostname'	        						                    #hostname for the mqtt stuff
 broker = 'brokerurl'		        					                    #broker
 port = 1883									                                #port of the broker
-intverval = 15                                                               #interval in seconds
+interval = 15                                                               #interval in seconds
 
 
 tool = requests.get(url=baseurl+'tool', headers=header).json
