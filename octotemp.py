@@ -11,11 +11,11 @@ import time
 
 apikey = yaml.load(open("/home/pi/.octoprint/config.yaml"))['api']['key']   #load apikey from machine
 header = { 'X-Api-Key': apikey } 						                    #make some headervoodoo to transmit the apikey
-baseurl = 'http://openfabbster.fablab.lan/api/printer/'				        #baseurl for the API call
-topictool = 'lab/sensor/openfabbsterabs/temp/tool'				            #topic to post to for the tool
-topicbed = 'lab/sensor/openfabbsterabs/temp/bed'				            #topic to post to for the bed
-hostname = 'openfabbsterabs'							                    #hostname for the mqtt stuff
-broker = 'fabserver.fablab.lan'							                    #broker
+baseurl = 'http://octoprint-printer/api/printer/'				            #baseurl for the API call
+topictool = 'sometopic/temp/tool'				                            #topic to post to for the tool
+topicbed = 'sometopic/temp/bed'	                    			            #topic to post to for the bed
+hostname = 'hostname'	        						                    #hostname for the mqtt stuff
+broker = 'brokerurl'		        					                    #broker
 port = 1883									                                #port of the broker
 inverval = 15                                                               #interval in seconds
 
