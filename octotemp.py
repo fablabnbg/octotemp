@@ -11,7 +11,7 @@ import time
 
 apikey = yaml.load(open("/home/pi/.octoprint/config.yaml"))['api']['key']   #load apikey from machine
 header = { 'X-Api-Key': apikey } 						                    #make some headervoodoo to transmit the apikey
-baseurl = 'http://octoprint-printer/api/printer/'				            #baseurl for the API call
+baseurl = 'http://localhost/api/printer/'				            #baseurl for the API call
 topictool = 'sometopic/temp/tool'				                            #topic to post to for the tool
 topicbed = 'sometopic/temp/bed'	                    			            #topic to post to for the bed
 hostname = 'hostname'	        						                    #hostname for the mqtt stuff
@@ -20,8 +20,6 @@ port = 1883									                                #port of the broker
 interval = 15                                                               #interval in seconds
 
 
-tool = requests.get(url=baseurl+'tool', headers=header).json
-bed = requests.get(url=baseurl+'bed', headers=header).json
 
 def on_connect(client, userdata, flags, rc):
 	print("Connected with result code " + str(rc))
